@@ -1,0 +1,12 @@
+
+${Ansi.BLUE}  _____   _____    _____  ______
+ / ___ \ (____ \  (_____)|  ___ \
+| |   | | _   \ \    _   | |   | |
+| |   | || |   | |  | |  | |   | |
+| |___| || |__/ /  _| |_ | |   | |
+ \_____/ |_____/  (_____)|_|   |_|
+
+::::::: ${Ansi.CYAN}Agent IMPORTATION${Ansi.DEFAULT}${Ansi.BLUE} ::::::::
+
+${Ansi.BLUE}Version ${Ansi.CYAN}${project.parent.version}${Ansi.BLUE}
+Spring Boot ${Ansi.CYAN}${spring-boot.version}${Ansi.DEFAULT}

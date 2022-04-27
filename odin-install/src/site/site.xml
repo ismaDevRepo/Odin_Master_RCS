@@ -1,0 +1,56 @@
+<project name="${application.name}">
+    <bannerLeft>
+        <name>${application.name}</name>
+        <!--        <src>images/favicon.ico</src>-->
+        <!--<href>https://tumorotek.github.io/TumoroteK</href>-->
+    </bannerLeft>
+    <!--<bannerRight>
+        <name>IGR</name>
+    </bannerRight>-->
+    <version position="right"/>
+    <publishDate position="right"/>
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.7</version>
+    </skin>
+    <body>
+        <head>
+            <![CDATA[<link rel="icon" href="images/favicon.ico">]]>
+            <!--<![CDATA[<link rel="stylesheet" type="text/css" href="http://vms-forge-test.intra.igr.fr:8085/repository/sites/resources/css/site.css">]]>-->
+            <![CDATA[<script src="https://kit.fontawesome.com/d7919a3e52.js"></script>]]>
+            <![CDATA[<script>
+                window.onload = function() {
+                    document.querySelectorAll('[title="GitHub"]')[0].href = "${project.url}";
+                    document.querySelectorAll('[title="Dossier d\'installation"]')[0].href = "${project.url}/releases/download/v${project.parent.version}/${project.artifactId}-${project.parent.version}.zip";
+                };
+            </script>]]>
+        </head>
+        <breadcrumbs>
+            <!--<item name="Interfaces" href="../../"/>-->
+            <item name="Liste des versions" href="${forge-url}/service/rest/repository/browse/sites/${application.name}/"/>
+        </breadcrumbs>
+        <links>
+            <item name="GitHub" href="" img="images/GitHub-Mark-32px.png" width="14px"/>
+        </links>
+        <menu name="${application.name}">
+            <item name="Notes de version" href="note-version.html"/>
+            <item name="Manuel d'utilisation" href="manuel.html"/>
+        </menu>
+        <menu name="Procédure">
+            <item name="Installation" href="installation-readme.html"/>
+            <item name="Mise à jour" href="mise-a-jour-readme.html"/>
+        </menu>
+        <menu name="Ressources">
+            <item name="Dossier d'installation" href=""/>
+            <item name="Prérequis techniques" href="prerequis-techniques.html"/>
+            <!--<item name="Script de livraison" href="livrer.sh"/>-->
+        </menu>
+        <!--<menu name="Développement">
+            <item name="Développer sur ${application.name}" href=""/>
+        </menu>-->
+    </body>
+    <poweredBy>
+        <logo name="IGR" href="https://www.gustaveroussy.fr/" img="images/Logo-gustave-roussy.jpg"/>
+    </poweredBy>
+</project>

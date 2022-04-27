@@ -1,0 +1,97 @@
+/* CSS commun disponible à l'adresse : http://vms-forge-test.intra.igr.fr:8085/repository/sites/resources/css/site.css */
+/* Possibilité d'ajouter ici du CSS */
+
+body {
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+}
+
+body.topBarDisabled {
+    padding-top: 0;
+}
+
+.h1, h1 {
+    font-size: 2.5rem;
+}
+
+.h2, h2 {
+    font-size: 2rem;
+}
+
+.h3, h3 {
+    font-size: 1.75rem;
+}
+
+.h4, h4 {
+    font-size: 1.5rem;
+}
+
+.h5, h5 {
+    font-size: 1.25rem;
+}
+
+.h6, h6 {
+    font-size: 1rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem !important;
+}
+
+footer {
+    text-align: center;
+}
+
+.badge {
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.badge-add {
+    color: #fff;
+    background-color: #00aba4;
+}
+
+.badge-improvement {
+    color: #fff;
+    background-color: #e85811;
+}
+
+.badge-modification {
+    color: #fff;
+    background-color: #e85811;
+}
+
+.badge-suppression {
+    color: #fff;
+    background-color: #d21281;
+}

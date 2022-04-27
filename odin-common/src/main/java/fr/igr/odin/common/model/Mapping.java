@@ -1,0 +1,72 @@
+package fr.igr.odin.common.model;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Created on 13/06/2019
+ *
+ * @author JDI
+ * @version 1.0.0
+ * @since 1.0.0
+ */
+@Entity
+@Table(name = "MAPPING")
+public class Mapping {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
+    private Long id;
+
+    @Column(name = "NAME")
+    private String name;
+
+    @Column(name = "DESCRIPTION")
+    private String description;
+
+    @OneToMany(mappedBy = "mapping", cascade = CascadeType.ALL)
+    private Set<MappingValue> mappingValues = new HashSet<>();
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Set<MappingValue> getMappingValues() {
+        return mappingValues;
+    }
+
+    public void setMappingValues(Set<MappingValue> mappingValues) {
+        this.mappingValues = mappingValues;
+    }
+
+    public void addMappingValue(MappingValue mappingValue) {
+        mappingValue.setMapping(this);
+        this.getMappingValues().add(mappingValue);
+    }
+
+    public void removeMappingValue(MappingValue mappingValue) {
+        mappingValue.setMapping(null);
+        this.getMappingValues().remove(mappingValue);
+    }
+}
